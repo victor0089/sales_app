@@ -1,0 +1,13 @@
+<!-- templates/sales/add_sale.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Add Sale</h2>
+  <form method="post" action="{% url 'add_sale' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Add Sale</button>
+  </form>
+{% endblock %}
+

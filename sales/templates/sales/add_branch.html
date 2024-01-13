@@ -1,0 +1,12 @@
+<!-- templates/sales/add_branch.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Add Branch</h2>
+  <form method="post" action="{% url 'add_branch' %}">
+    {% csrf_token %}
+    <!-- Add form fields for branch data -->
+    <button type="submit">Add Branch</button>
+  </form>
+{% endblock %}
+

@@ -1,0 +1,48 @@
+<!-- templates/sales/add_ledger.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Add Ledger Entry</h2>
+  <form method="post" action="{% url 'add_ledger' %}">
+    {% csrf_token %}
+    <!-- Add form fields for ledger entry data -->
+    <button type="submit">Add Ledger Entry</button>
+  </form>
+{% endblock %}
+
+<!-- templates/sales/ledgers_list.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Ledgers List</h2>
+  <ul>
+    {% for ledger in ledgers %}
+      <li>{{ ledger.account }} - ${{ ledger.balance }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+
+<!-- templates/sales/add_trial_balance.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Add Trial Balance Entry</h2>
+  <form method="post" action="{% url 'add_trial_balance' %}">
+    {% csrf_token %}
+    <!-- Add form fields for trial balance entry data -->
+    <button type="submit">Add Trial Balance Entry</button>
+  </form>
+{% endblock %}
+
+<!-- templates/sales/trial_balances_list.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Trial Balances List</h2>
+  <ul>
+    {% for trial_balance in trial_balances %}
+      <li>{{ trial_balance.account }} - ${{ trial_balance.debit_amount }} (Debit) - ${{ trial_balance.credit_amount }} (Credit)</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+
