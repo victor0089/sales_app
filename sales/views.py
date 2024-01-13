@@ -8,6 +8,16 @@ from .forms import SaleForm, ProductForm, CustomerForm, ExpenseForm, GeneralJour
 from .forms import LedgerForm, TrialBalanceForm, IncomeSummaryForm, DepositForm, WithdrawForm, CashDiscountForm, SalesReturnsAllowancesForm
 from .forms import PurchasesForm, PurchasesReturnsAllowancesForm, NotesReceivableForm, AccountsReceivableForm, InventoryAdjustingEntryForm, AdjustingEntryForm
 
+def add_sale(request):
+    if request.method == 'POST':
+        # Handle form submission and add sale to the database
+        # Remember to validate the form data and handle errors
+        # ...
+
+    products = Product.objects.all()
+    customers = Customer.objects.all()
+    return render(request, 'sales/add_sale.html', {'products': products, 'customers': customers})
+    
 def add_income_summary(request):
     if request.method == 'POST':
         form = IncomeSummaryForm(request.POST)
