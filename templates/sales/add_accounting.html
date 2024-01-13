@@ -1,0 +1,12 @@
+<!-- templates/sales/add_accounting.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Add Accounting Record</h2>
+  <form method="post" action="{% url 'add_accounting' %}">
+    {% csrf_token %}
+    <!-- Add form fields for accounting record data -->
+    <button type="submit">Add Accounting Record</button>
+  </form>
+{% endblock %}
+
