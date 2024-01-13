@@ -20,5 +20,5 @@ from .views import add_sale
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('add-sale/', add_sale.site.urls)
+    path('add-sale/', add_sale.urls)
 ]
