@@ -16,9 +16,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import add_sale, add_product, add_customer, add_branch, add_accounting, add_expense, expenses_list
-from .views import add_general_journal, general_journals_list, add_ledger, ledgers_list, add_trial_balance, trial_balances_list
-from .views import add_income_summary, income_summaries_list
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -38,5 +35,4 @@ urlpatterns = [
     path('add-income-summary/', add_income_summary.site.urls, name='add_income_summary'),
     path('income-summaries-list/', income_summaries_list.site.urls, name='income_summaries_list'),
     # Add URLs for other views
-]
 ]
