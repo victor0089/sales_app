@@ -19,20 +19,4 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('add-sale/', add_sale.site.urls, name='add_sale'),
-    path('add-product/', add_product.site.urls, name='add_product'),
-    path('add-customer/', add_customer.site.urls, name='add_customer'),
-    path('add-branch/', add_branch.site.urls, name='add_branch'),
-    path('add-accounting/', add_accounting.site.urls, name='add_accounting'),
-    path('add-expense/', add_expense.site.urls, name='add_expense'),
-    path('expenses-list/', expenses_list.site.urls, name='expenses_list'),
-    path('add-general-journal/', add_general_journal.site.urls, name='add_general_journal'),
-    path('general-journals-list/', general_journals_list.site.urls, name='general_journals_list'),
-    path('add-ledger/', add_ledger.site.urls, name='add_ledger'),
-    path('ledgers-list/', ledgers_list.site.urls, name='ledgers_list'),
-    path('add-trial-balance/', add_trial_balance.site.urls, name='add_trial_balance'),
-    path('trial-balances-list/', trial_balances_list.site.urls, name='trial_balances_list'),
-    path('add-income-summary/', add_income_summary.site.urls, name='add_income_summary'),
-    path('income-summaries-list/', income_summaries_list.site.urls, name='income_summaries_list'),
-    # Add URLs for other views
-]
+
